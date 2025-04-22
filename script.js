@@ -9,17 +9,8 @@ const getSum = () => {
     total += Number(price.textContent);
   });
 
-  // Check if total is already displayed and remove it to avoid duplicates
-  let existingTotal = document.getElementById("total");
-  if (existingTotal) {
-    existingTotal.remove();
-  }
-
-  // Create and show the total
-  const totalElement = document.createElement("div");
-  totalElement.id = "total";
-  totalElement.textContent = `Total: Rs ${total}`;
-  document.body.appendChild(totalElement);
+  const ans = document.getElementById("ans");
+  ans.textContent = total;
 };
 
 getSumBtn.addEventListener("click", getSum);
